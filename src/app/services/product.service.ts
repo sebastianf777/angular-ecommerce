@@ -7,11 +7,15 @@ import { Product } from '../models/product.model';
   providedIn: 'root',
 })
 export class ProductService {
-  private apiUrl = 'https://fakestoreapi.com/products'; // URL de la API
+  private apiUrl = 'https://fakestoreapi.com/products';
 
   constructor(private http: HttpClient) {}
 
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.apiUrl);
+  }
+
+  getProductById(id: number): Observable<Product> { // Agrega este método
+    return this.http.get<Product>(`${this.apiUrl}/${id}`);
   }
 }

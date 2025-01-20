@@ -10,9 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
-  declarations: [
-    AppComponent, // Declara el componente raíz
-  ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -22,6 +20,5 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonModule, // Modulo para botones
   ],
   providers: [],
-  bootstrap: [AppComponent], // Componente raíz que se carga al inicio
 })
 export class AppModule {}
